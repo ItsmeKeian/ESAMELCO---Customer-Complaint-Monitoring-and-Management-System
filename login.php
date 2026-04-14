@@ -22,7 +22,7 @@
         <div class="logo-wrapper">
             <img src="assets/img/logo.jpg" alt="ESAMELCO Logo">
             <h5>Eastern Samar Electric<br>Cooperative, Inc.</h5>
-            <p>Complaint Monitoring &amp; Management System</p>
+            <p>Complaint Monitoring &amp; Management Systemssss</p>
         </div>
 
         <div class="divider"></div>
