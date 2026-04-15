@@ -22,15 +22,7 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════
-     LOADING OVERLAY
-═══════════════════════════════════════════════════════════════ -->
-<div id="loadingOverlay">
-    <div class="spinner-wrap">
-        <div class="spinner-border" style="width:2.5rem;height:2.5rem;color:#1a6b2f;" role="status"></div>
-        <p>Loading dashboard...</p>
-    </div>
-</div>
+
 
 <!-- ═══════════════════════════════════════════════════════════
      SIDEBAR OVERLAY (mobile tap-to-close)
