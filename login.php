@@ -98,7 +98,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-4.0.0.min.js"></script>
     <!-- Bootstrap 5 JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Login JS -->
