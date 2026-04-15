@@ -286,7 +286,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="tracking.php" class="nav-link">
+            <a href="live_tracking.php" class="nav-link">
                 <i class="bi bi-geo-alt"></i>
                 Live Tracking
             </a>
