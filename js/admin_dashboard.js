@@ -231,7 +231,7 @@ $(document).ready(function () {
 
     // ── Main: load all dashboard data via AJAX ───────────────────
     function loadDashboard() {
-        $('#loadingOverlay').show();
+       
 
         $.ajax({
             url: '../php/admin_dashboard.php',
@@ -258,9 +258,7 @@ $(document).ready(function () {
             error: function () {
                 alert('Server error. Could not load dashboard data.');
             },
-            complete: function () {
-                $('#loadingOverlay').fadeOut(300);
-            }
+           
         });
     }
 
