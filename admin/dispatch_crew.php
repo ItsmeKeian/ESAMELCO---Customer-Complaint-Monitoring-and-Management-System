@@ -64,7 +64,7 @@
     <div class="sidebar-label">Management</div>
     <ul class="sidebar-nav">
         <li class="nav-item">
-            <a href="crew.php" class="nav-link">
+            <a href="crew_member.php" class="nav-link">
                 <i class="bi bi-people"></i>
                 Crew Members
             </a>
