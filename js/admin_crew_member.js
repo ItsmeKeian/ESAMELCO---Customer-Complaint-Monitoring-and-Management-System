@@ -49,7 +49,7 @@ $(document).ready(function () {
         );
 
         $.ajax({
-            url: '../php/crew_member.php',
+            url: '../php/admin_crew_member.php',
             type: 'GET',
             data: { action: 'list', search, status },
             dataType: 'json',
@@ -133,7 +133,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-add').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/crew_member.php?action=add',
+            url: '../php/admin_crew_member.php?action=add',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -184,7 +184,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-edit').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/crew_member.php?action=edit',
+            url: '../php/admin_crew_member.php?action=edit',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -211,7 +211,7 @@ $(document).ready(function () {
         if (!confirm(`Are you sure you want to ${action} this crew member?`)) return;
 
         $.ajax({
-            url: '../php/crew_member.php?action=toggle_status',
+            url: '../php/admin_crew_member.php?action=toggle_status',
             type: 'POST',
             data: { id },
             dataType: 'json',
