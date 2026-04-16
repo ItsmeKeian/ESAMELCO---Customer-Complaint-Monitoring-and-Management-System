@@ -96,7 +96,7 @@ $(document).ready(function () {
     // ── Main: load and render tracking data ──────────────────────
     function loadTracking() {
         $.ajax({
-            url: '../php/live_tracking.php',
+            url: '../php/admin_live_tracking.php',
             type: 'GET',
             dataType: 'json',
             success: function (res) {
