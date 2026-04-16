@@ -1,0 +1,437 @@
+ /* ── Refresh spin ───────────────────────────────────────── */
+ @keyframes spin { to { transform: rotate(360deg); } }
+ .spin { display: inline-block; animation: spin 0.6s linear; }
+
+ /* ── Summary stat cards ─────────────────────────────────── */
+ .track-stat-row {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 14px;
+     margin-bottom: 20px;
+ }
+
+ .track-stat {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     padding: 16px 18px;
+     display: flex;
+     align-items: center;
+     gap: 14px;
+ }
+
+ .track-stat-icon {
+     width: 46px;
+     height: 46px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.2rem;
+     flex-shrink: 0;
+ }
+
+ .track-stat-icon.total     { background: #e8f4fd; color: #0d6efd; }
+ .track-stat-icon.busy      { background: #fff8e1; color: #f59e0b; }
+ .track-stat-icon.available { background: #e8f5e9; color: #1a6b2f; }
+
+ .track-stat-label {
+     font-size: 0.75rem;
+     color: #6c757d;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 0.05em;
+ }
+
+ .track-stat-value {
+     font-size: 1.6rem;
+     font-weight: 700;
+     color: #212529;
+     line-height: 1;
+ }
+
+ @media (max-width: 600px) {
+     .track-stat-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+     .track-stat { padding: 12px; gap: 8px; }
+     .track-stat-value { font-size: 1.3rem; }
+ }
+
+ /* ── Main tracking layout: map + sidebar ────────────────── */
+ .tracking-layout {
+     display: grid;
+     grid-template-columns: 1fr 280px;
+     gap: 16px;
+     height: calc(100vh - 240px);
+     min-height: 460px;
+ }
+
+ @media (max-width: 900px) {
+     .tracking-layout {
+         grid-template-columns: 1fr;
+         height: auto;
+     }
+ }
+
+ /* ── Map container ──────────────────────────────────────── */
+ .map-card {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .map-card-header {
+     padding: 12px 18px;
+     border-bottom: 1px solid #e9ecef;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-shrink: 0;
+ }
+
+ .map-card-header h6 {
+     margin: 0;
+     font-size: 0.92rem;
+     font-weight: 700;
+     color: #212529;
+ }
+
+ #trackingMap {
+     flex: 1;
+     min-height: 400px;
+     z-index: 1;
+ }
+
+ /* ── Map legend ─────────────────────────────────────────── */
+ .map-legend {
+     display: flex;
+     gap: 16px;
+     align-items: center;
+     font-size: 0.76rem;
+     color: #6c757d;
+ }
+
+ .legend-dot {
+     width: 11px;
+     height: 11px;
+     border-radius: 50%;
+     display: inline-block;
+     margin-right: 5px;
+     border: 2px solid #fff;
+     box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+ }
+
+ /* ── Crew sidebar ───────────────────────────────────────── */
+ .crew-sidebar {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .crew-sidebar-header {
+     padding: 12px 16px;
+     border-bottom: 1px solid #e9ecef;
+     flex-shrink: 0;
+ }
+
+ .crew-sidebar-header h6 {
+     margin: 0;
+     font-size: 0.88rem;
+     font-weight: 700;
+     color: #212529;
+ }
+
+ #crew-sidebar-list {
+     flex: 1;
+     overflow-y: auto;
+ }
+
+ /* ── Crew list items ────────────────────────────────────── */
+ .crew-list-item {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     padding: 12px 16px;
+     border-bottom: 1px solid #f5f5f5;
+     cursor: pointer;
+     transition: background 0.15s;
+ }
+
+ .crew-list-item:last-child { border-bottom: none; }
+ .crew-list-item:hover      { background: #f8fdf9; }
+ .crew-list-item.active     { background: #e8f5e9; }
+
+ .crew-list-avatar {
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     color: #fff;
+     font-size: 0.85rem;
+     font-weight: 700;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+ }
+
+ .crew-list-info  { flex: 1; min-width: 0; }
+
+ .crew-list-name {
+     font-size: 0.85rem;
+     font-weight: 600;
+     color: #212529;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+ .crew-list-meta {
+     font-size: 0.75rem;
+     color: #6c757d;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     margin-top: 2px;
+ }
+
+ .crew-list-seen {
+     font-size: 0.70rem;
+     color: #adb5bd;
+     margin-top: 1px;
+ }
+
+ .status-dot {
+     width: 7px;
+     height: 7px;
+     border-radius: 50%;
+     flex-shrink: 0;
+ }
+
+ /* ── Last updated label ─────────────────────────────────── */
+ .last-updated {
+     font-size: 0.76rem;
+     color: #adb5bd;
+ } /* ── Refresh spin ───────────────────────────────────────── */
+ @keyframes spin { to { transform: rotate(360deg); } }
+ .spin { display: inline-block; animation: spin 0.6s linear; }
+
+ /* ── Summary stat cards ─────────────────────────────────── */
+ .track-stat-row {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 14px;
+     margin-bottom: 20px;
+ }
+
+ .track-stat {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     padding: 16px 18px;
+     display: flex;
+     align-items: center;
+     gap: 14px;
+ }
+
+ .track-stat-icon {
+     width: 46px;
+     height: 46px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.2rem;
+     flex-shrink: 0;
+ }
+
+ .track-stat-icon.total     { background: #e8f4fd; color: #0d6efd; }
+ .track-stat-icon.busy      { background: #fff8e1; color: #f59e0b; }
+ .track-stat-icon.available { background: #e8f5e9; color: #1a6b2f; }
+
+ .track-stat-label {
+     font-size: 0.75rem;
+     color: #6c757d;
+     font-weight: 600;
+     text-transform: uppercase;
+     letter-spacing: 0.05em;
+ }
+
+ .track-stat-value {
+     font-size: 1.6rem;
+     font-weight: 700;
+     color: #212529;
+     line-height: 1;
+ }
+
+ @media (max-width: 600px) {
+     .track-stat-row { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+     .track-stat { padding: 12px; gap: 8px; }
+     .track-stat-value { font-size: 1.3rem; }
+ }
+
+ /* ── Main tracking layout: map + sidebar ────────────────── */
+ .tracking-layout {
+     display: grid;
+     grid-template-columns: 1fr 280px;
+     gap: 16px;
+     height: calc(100vh - 240px);
+     min-height: 460px;
+ }
+
+ @media (max-width: 900px) {
+     .tracking-layout {
+         grid-template-columns: 1fr;
+         height: auto;
+     }
+ }
+
+ /* ── Map container ──────────────────────────────────────── */
+ .map-card {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .map-card-header {
+     padding: 12px 18px;
+     border-bottom: 1px solid #e9ecef;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-shrink: 0;
+ }
+
+ .map-card-header h6 {
+     margin: 0;
+     font-size: 0.92rem;
+     font-weight: 700;
+     color: #212529;
+ }
+
+ #trackingMap {
+     flex: 1;
+     min-height: 400px;
+     z-index: 1;
+ }
+
+ /* ── Map legend ─────────────────────────────────────────── */
+ .map-legend {
+     display: flex;
+     gap: 16px;
+     align-items: center;
+     font-size: 0.76rem;
+     color: #6c757d;
+ }
+
+ .legend-dot {
+     width: 11px;
+     height: 11px;
+     border-radius: 50%;
+     display: inline-block;
+     margin-right: 5px;
+     border: 2px solid #fff;
+     box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+ }
+
+ /* ── Crew sidebar ───────────────────────────────────────── */
+ .crew-sidebar {
+     background: #fff;
+     border: 1px solid #e9ecef;
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .crew-sidebar-header {
+     padding: 12px 16px;
+     border-bottom: 1px solid #e9ecef;
+     flex-shrink: 0;
+ }
+
+ .crew-sidebar-header h6 {
+     margin: 0;
+     font-size: 0.88rem;
+     font-weight: 700;
+     color: #212529;
+ }
+
+ #crew-sidebar-list {
+     flex: 1;
+     overflow-y: auto;
+ }
+
+ /* ── Crew list items ────────────────────────────────────── */
+ .crew-list-item {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     padding: 12px 16px;
+     border-bottom: 1px solid #f5f5f5;
+     cursor: pointer;
+     transition: background 0.15s;
+ }
+
+ .crew-list-item:last-child { border-bottom: none; }
+ .crew-list-item:hover      { background: #f8fdf9; }
+ .crew-list-item.active     { background: #e8f5e9; }
+
+ .crew-list-avatar {
+     width: 36px;
+     height: 36px;
+     border-radius: 50%;
+     color: #fff;
+     font-size: 0.85rem;
+     font-weight: 700;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-shrink: 0;
+ }
+
+ .crew-list-info  { flex: 1; min-width: 0; }
+
+ .crew-list-name {
+     font-size: 0.85rem;
+     font-weight: 600;
+     color: #212529;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+ .crew-list-meta {
+     font-size: 0.75rem;
+     color: #6c757d;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+     margin-top: 2px;
+ }
+
+ .crew-list-seen {
+     font-size: 0.70rem;
+     color: #adb5bd;
+     margin-top: 1px;
+ }
+
+ .status-dot {
+     width: 7px;
+     height: 7px;
+     border-radius: 50%;
+     flex-shrink: 0;
+ }
+
+ /* ── Last updated label ─────────────────────────────────── */
+ .last-updated {
+     font-size: 0.76rem;
+     color: #adb5bd;
+ }
