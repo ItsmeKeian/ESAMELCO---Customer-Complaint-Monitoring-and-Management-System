@@ -1,0 +1,263 @@
+  /* ── Filter bar ─────────────────────────────────────────── */
+  .filter-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.filter-bar .form-select,
+.filter-bar .form-control {
+    font-size: 0.875rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    padding: 8px 12px;
+    height: 38px;
+}
+
+.filter-bar .form-select  { max-width: 150px; }
+.filter-bar .form-control { max-width: 240px; }
+
+/* ── Add button ─────────────────────────────────────────── */
+.btn-add {
+    background: #1a6b2f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    transition: background 0.2s;
+}
+
+.btn-add:hover { background: #155724; }
+
+/* ── Crew count badge ───────────────────────────────────── */
+#crew-count {
+    background: #1a6b2f;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* ── Small avatar in table ──────────────────────────────── */
+.crew-avatar-sm {
+    width: 36px;
+    height: 36px;
+    background: #1a6b2f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* ── Status badges ──────────────────────────────────────── */
+.badge-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+.badge-active   { background: #e8f5e9; color: #1a6b2f; }
+.badge-inactive { background: #fce4ec; color: #c62828; }
+
+.badge-avail {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+.badge-avail.available { background: #e3f2fd; color: #0d6efd; }
+.badge-avail.busy      { background: #fff8e1; color: #b45309; }
+
+/* ── Action buttons ─────────────────────────────────────── */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+    transition: background 0.15s;
+}
+
+.btn-edit   { background: #e3f2fd; color: #0d6efd; }
+.btn-delete { background: #fce4ec; color: #c62828; }
+.btn-edit:hover   { background: #bbdefb; }
+.btn-delete:hover { background: #f8bbd0; }
+
+/* ── Modal overlay ──────────────────────────────────────── */
+.crew-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+}
+
+.crew-modal[style*="display: block"],
+.crew-modal[style*="display:block"] {
+    display: flex !important;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+}
+
+.modal-card {
+    background: #fff;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: 16px;
+    padding: 28px;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-card-header h6 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a6b2f;
+}
+
+.btn-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #6c757d;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.btn-modal-close:hover { color: #212529; }
+
+/* ── Form fields inside modal ───────────────────────────── */
+.modal-form-group {
+    margin-bottom: 14px;
+}
+
+.modal-form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-form-group .form-control,
+.modal-form-group .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 0.88rem;
+    padding: 9px 12px;
+}
+
+.modal-form-group .form-control:focus,
+.modal-form-group .form-select:focus {
+    border-color: #1a6b2f;
+    box-shadow: 0 0 0 3px rgba(26,107,47,0.10);
+}
+
+/* ── Form row (two columns) ─────────────────────────────── */
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 480px) { .form-row-2 { grid-template-columns: 1fr; } }
+
+/* ── Modal footer buttons ───────────────────────────────── */
+.modal-footer-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-cancel {
+    background: #f8f9fa;
+    color: #495057;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-cancel:hover { background: #e9ecef; }
+
+.btn-save {
+    background: #1a6b2f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 22px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover    { background: #155724; }
+.btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Error box inside modal ─────────────────────────────── */
+.modal-error {
+    display: none;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    color: #856404;
+    margin-bottom: 12px;
+}
+
+/* ── Password hint ──────────────────────────────────────── */
+.field-hint {
+    font-size: 0.75rem;
+    color: #adb5bd;
+    margin-top: 3px;
+}
