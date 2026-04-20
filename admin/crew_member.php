@@ -9,8 +9,8 @@
     <link rel="icon" href="../assets/img/logo.jpg">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../assets/css/admin_dashboard.css">
-    <link rel="stylesheet" href="../assets/css/admin_crew_member.css">
+    <link rel="stylesheet" href="../assets/css/admin/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/admin/crew_member.css">
 
 </head>
 <body>
