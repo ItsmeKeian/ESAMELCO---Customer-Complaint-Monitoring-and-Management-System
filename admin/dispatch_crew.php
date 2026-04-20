@@ -199,7 +199,7 @@
 <!-- ── Scripts ── -->
 <script src="../assets/js/jquery-4.0.0.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
-<script src="../js/dispatch_crew.js"></script>
+<script src="../js/admin/dispatch_crew.js"></script>
 
 </body>
 </html>

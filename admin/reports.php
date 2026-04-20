@@ -415,7 +415,7 @@
 <script src="../assets/js/jquery-4.0.0.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="../js/reports.js"></script>
+<script src="../js/admin/reports.js"></script>
 
 </body>
 </html>

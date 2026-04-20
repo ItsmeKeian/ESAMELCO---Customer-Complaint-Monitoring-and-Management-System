@@ -303,7 +303,7 @@
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <!-- Dashboard JS -->
-<script src="../js/admin_dashboard.js"></script>
+<script src="../js/admin/dashboard.js"></script>
 
 </body>
 </html>
