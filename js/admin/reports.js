@@ -240,7 +240,7 @@ $(document).ready(function () {
         $('#btn-refresh').find('i').addClass('spin');
 
         $.ajax({
-            url: '../php/reports.php',
+            url: '../php/admin/reports.php',
             type: 'GET',
             data: { action: 'overview', year, month },
             dataType: 'json',

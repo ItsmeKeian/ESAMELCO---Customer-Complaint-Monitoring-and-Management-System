@@ -234,7 +234,7 @@ $(document).ready(function () {
        
 
         $.ajax({
-            url: '../php/admin_dashboard.php',
+            url: '/esamelco/php/admin/dashboard.php',
             type: 'GET',
             dataType: 'json',
             success: function (res) {

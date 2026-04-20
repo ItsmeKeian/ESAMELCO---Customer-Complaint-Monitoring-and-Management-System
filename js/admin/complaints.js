@@ -38,7 +38,7 @@ $(document).ready(function () {
         );
 
         $.ajax({
-            url: '../php/complaints.php',
+            url: '../php/admin/complaints.php',
             type: 'GET',
             data: { action: 'list', status: status, search: search },
             dataType: 'json',
@@ -109,7 +109,7 @@ $(document).ready(function () {
         $('#viewModal').fadeIn(200);
 
         $.ajax({
-            url: '../php/complaints.php',
+            url: '../php/admin/complaints.php',
             type: 'GET',
             data: { action: 'view', id: id },
             dataType: 'json',
@@ -207,7 +207,7 @@ $(document).ready(function () {
         btn.prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/complaints.php?action=update_status',
+            url: '../php/admin/complaints.php?action=update_status',
             type: 'POST',
             data: { id: id, status: status },
             dataType: 'json',
@@ -237,7 +237,7 @@ $(document).ready(function () {
         if (!confirm(`Delete complaint ${ticket}?\n\nThis cannot be undone.`)) return;
 
         $.ajax({
-            url: '../php/complaints.php?action=delete',
+            url: '../php/admin/complaints.php?action=delete',
             type: 'POST',
             data: { id: id },
             dataType: 'json',

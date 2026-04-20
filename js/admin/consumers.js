@@ -63,7 +63,7 @@ $(document).ready(function () {
         );
 
         $.ajax({
-            url: '../php/consumers.php',
+            url: '../php/admin/consumers.php',
             type: 'GET',
             data: { action: 'list', search, status },
             dataType: 'json',
@@ -153,7 +153,7 @@ $(document).ready(function () {
         openModal();
 
         $.ajax({
-            url: '../php/consumers.php',
+            url: '../php/admin/consumers.php',
             type: 'GET',
             data: { action: 'view', id },
             dataType: 'json',
@@ -248,7 +248,7 @@ $(document).ready(function () {
         if (!confirm(`Are you sure you want to ${action} this consumer account?`)) return;
 
         $.ajax({
-            url: '../php/consumers.php?action=toggle_status',
+            url: '../php/admin/consumers.php?action=toggle_status',
             type: 'POST',
             data: { id },
             dataType: 'json',
@@ -268,7 +268,7 @@ $(document).ready(function () {
         if (!confirm(`Delete account of "${name}"?\n\nThis cannot be undone.`)) return;
 
         $.ajax({
-            url: '../php/consumers.php?action=delete',
+            url: '../php/admin/consumers.php?action=delete',
             type: 'POST',
             data: { id },
             dataType: 'json',

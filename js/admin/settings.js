@@ -48,7 +48,7 @@ $(document).ready(function () {
     // ── Load settings data ───────────────────────────────────────
     function loadSettings() {
         $.ajax({
-            url: '../php/settings.php',
+            url: '../php/admin/settings.php',
             type: 'GET',
             data: { action: 'load' },
             dataType: 'json',
@@ -89,7 +89,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-profile').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/settings.php?action=update_profile',
+            url: '../php/admin/settings.php?action=update_profile',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -118,7 +118,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-password').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/settings.php?action=change_password',
+            url: '../php/admin/settings.php?action=change_password',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
@@ -153,7 +153,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-system').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/settings.php?action=update_system',
+            url: '../php/admin/settings.php?action=update_system',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',

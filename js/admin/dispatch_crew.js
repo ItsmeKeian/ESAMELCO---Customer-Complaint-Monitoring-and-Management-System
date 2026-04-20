@@ -32,7 +32,7 @@ $(document).ready(function () {
         `);
 
         $.ajax({
-            url: '../php/dispatch_crew.php',
+            url: '../php/admin/dispatch_crew.php',
             type: 'GET',
             data: { action: 'load' },
             dataType: 'json',
@@ -122,7 +122,7 @@ $(document).ready(function () {
         `);
 
         $.ajax({
-            url: '../php/dispatch_crew.php',
+            url: '../php/admin/dispatch_crew.php',
             type: 'GET',
             data: { action: 'get_crew', complaint_id: complaint_id },
             dataType: 'json',
@@ -191,7 +191,7 @@ $(document).ready(function () {
         btn.prop('disabled', true).text('Dispatching...');
 
         $.ajax({
-            url: '../php/dispatch_crew.php?action=dispatch',
+            url: '../php/admin/dispatch_crew.php?action=dispatch',
             type: 'POST',
             data: {
                 complaint_id: selectedComplaintId,
