@@ -1,0 +1,213 @@
+  /* ── Filter tabs ────────────────────────────────────────── */
+  .filter-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.filter-tab {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.83rem;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.filter-tab.active,
+.filter-tab:hover {
+    background: #0d3b1f;
+    color: #fff;
+    border-color: #0d3b1f;
+}
+
+/* ── Assignment count badge ─────────────────────────────── */
+#assign-count {
+    background: #0d3b1f;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* ── Assignment card ────────────────────────────────────── */
+.assign-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 14px;
+    transition: box-shadow 0.2s;
+}
+
+.assign-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.07); }
+
+.assign-card.active {
+    border-left: 4px solid #1a6b2f;
+}
+
+.assign-card.completed {
+    border-left: 4px solid #adb5bd;
+    opacity: 0.85;
+}
+
+/* ── Card header ────────────────────────────────────────── */
+.assign-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.assign-ticket {
+    font-size: 0.80rem;
+    font-weight: 700;
+    color: #1a6b2f;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.assign-type {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+/* ── Description ────────────────────────────────────────── */
+.assign-desc {
+    font-size: 0.85rem;
+    color: #495057;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* ── Photo ──────────────────────────────────────────────── */
+.complaint-photo {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-bottom: 12px;
+}
+
+/* ── Meta info ──────────────────────────────────────────── */
+.assign-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.80rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.assign-meta i { width: 16px; }
+
+/* ── ETA ────────────────────────────────────────────────── */
+.assign-eta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff8e1;
+    border: 1px solid #ffc107;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #856404;
+    margin-bottom: 12px;
+}
+
+/* ── Map link ───────────────────────────────────────────── */
+.btn-map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.80rem;
+    color: #0d6efd;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.btn-map-link:hover { text-decoration: underline; }
+
+/* ── Action buttons ─────────────────────────────────────── */
+.assign-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.btn-status-update {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 0.83rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: opacity 0.2s;
+}
+
+.btn-status-update:hover    { opacity: 0.85; }
+.btn-status-update:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-arrived  { background: #fff8e1; color: #856404; border: 1px solid #ffc107; }
+.btn-resolved { background: #1a6b2f; color: #fff; }
+
+.btn-gps-update {
+    background: #e8f5e9;
+    color: #1a6b2f;
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 0.90rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-gps-update:hover { background: #c8e6c9; }
+
+/* ── Status badges ──────────────────────────────────────── */
+.badge-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge-pending   { background: #fff8e1; color: #b45309; }
+.badge-ongoing   { background: #e8f5e9; color: #1a6b2f; }
+.badge-resolved  { background: #e3f2fd; color: #0d6efd; }
+.badge-cancelled { background: #fce4ec; color: #c62828; }
+
+/* ── Empty state ────────────────────────────────────────── */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #adb5bd;
+}
+
+.empty-state i { font-size: 2.2rem; display: block; margin-bottom: 8px; }
+.empty-state p { font-size: 0.85rem; margin: 0; }
+
+.filter-tab {
+    min-width: 90px;
+    text-align: center;
+    font-size: 0.83rem !important;
+    white-space: nowrap;
+}
