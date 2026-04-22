@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+    const urlParams = new URLSearchParams(window.location.search);
+if (urlParams.get('registered') === '1') {
+    $('#alert-box').addClass('alert-success')
+       .html('<i class="bi bi-check-circle-fill me-2"></i>Account created! You can now log in.')
+       .show();
+}
+
     // ── Password show/hide toggle ────────────────────────────────
     $('#togglePassword').on('click', function () {
         const input   = $('#password');
