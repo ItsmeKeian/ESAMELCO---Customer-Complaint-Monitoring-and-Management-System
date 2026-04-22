@@ -277,6 +277,6 @@
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script src="../js/admin/reports.js"></script>
-
+<script src="../js/admin/badge_counts.js"></script>
 </body>
 </html>

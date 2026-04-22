@@ -206,6 +206,7 @@
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
 <!-- Live Tracking JS -->
 <script src="../js/admin/live_tracking.js"></script>
+<script src="../js/admin/badge_counts.js"></script>
 
 </body>
 </html>
