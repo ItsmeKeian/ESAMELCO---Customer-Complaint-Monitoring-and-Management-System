@@ -86,7 +86,7 @@ $(document).ready(function () {
 
                 // Update count badge
                 $('#complaints-count').text(complaints.length);
-                $('#nav-badge-complaints').text(res.pending_count);
+                
             },
             error: function () {
                 $('#complaints-tbody').html(

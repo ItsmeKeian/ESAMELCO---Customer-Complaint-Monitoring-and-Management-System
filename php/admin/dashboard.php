@@ -53,7 +53,7 @@ try {
             cr.full_name AS crew_name
         FROM complaints c
         JOIN users u  ON c.consumer_id = u.id
-        LEFT JOIN assignments a  ON c.id = a.complaint_id AND a.status = 'active'
+        LEFT JOIN assignments a  ON c.id = a.complaint_id AND a.status IN ('active', 'completed')
         LEFT JOIN users cr ON a.crew_id = cr.id
         ORDER BY c.created_at DESC
         LIMIT 10
