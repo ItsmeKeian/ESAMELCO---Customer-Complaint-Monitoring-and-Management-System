@@ -86,10 +86,14 @@
     <div class="section-card">
         <div class="section-card-header">
             <h6><i class="bi bi-clock-history me-2 text-success"></i>Recent Completed Jobs</h6>
+            <a href="my_ratings.php" style="font-size:0.80rem;color:#ffc107;text-decoration:none;font-weight:600;">
+                <i class="bi bi-star-fill me-1"></i>View My Ratings
+            </a>
             <a href="my_assignments.php"
                style="font-size:0.80rem;color:#1a6b2f;text-decoration:none;font-weight:600;">
                 View all <i class="bi bi-arrow-right"></i>
             </a>
+            
         </div>
         <div id="recent-jobs-list">
             <div class="empty-state">
