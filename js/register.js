@@ -106,7 +106,7 @@ $(document).ready(function () {
                 if (res.success) {
                     showAlert(res.message + ' Redirecting to login...', 'success');
                     setTimeout(function () {
-                        window.location.href = 'login.html?registered=1';
+                        window.location.href = 'login.php?registered=1';
                     }, 1500);
                 } else {
                     showAlert(res.message, 'danger');
