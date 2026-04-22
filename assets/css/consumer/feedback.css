@@ -1,0 +1,480 @@
+/* ── Base ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #343a40;
+}
+
+/* ── Top Navbar ─────────────────────────────────────────────────── */
+.consumer-topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #1a6b2f;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topnav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.topnav-brand img { width: 36px; height: 36px; object-fit: contain; }
+
+.topnav-brand-text {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.topnav-right { display: flex; align-items: center; gap: 10px; }
+
+.consumer-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 4px 12px 4px 4px;
+}
+
+.consumer-avatar {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: #1a6b2f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.consumer-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-logout {
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-logout:hover { background: rgba(255,255,255,0.25); color: #fff; }
+
+/* ── Content ────────────────────────────────────────────────────── */
+.content-area {
+    padding: 20px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ── Back link ──────────────────────────────────────────────────── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #1a6b2f;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.back-link:hover { opacity: 0.75; }
+
+/* ── Complaint summary card ─────────────────────────────────────── */
+.complaint-summary {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.summary-icon {
+    width: 44px;
+    height: 44px;
+    background: #e8f5e9;
+    color: #1a6b2f;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.summary-ticket {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #1a6b2f;
+    margin-bottom: 2px;
+}
+
+.summary-type {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 3px;
+}
+
+.summary-desc {
+    font-size: 0.81rem;
+    color: #6c757d;
+}
+
+/* ── Crew card ──────────────────────────────────────────────────── */
+.crew-card {
+    background: #f8fdf9;
+    border: 1px solid #a5d6a7;
+    border-radius: 12px;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.crew-avatar-lg {
+    width: 48px;
+    height: 48px;
+    background: #1a6b2f;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.crew-card-label {
+    font-size: 0.73rem;
+    color: #6c757d;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 2px;
+}
+
+.crew-card-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0d3b1f;
+}
+
+/* ── Feedback form card ─────────────────────────────────────────── */
+.feedback-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.feedback-card-header {
+    background: linear-gradient(135deg, #1a6b2f, #2e7d32);
+    padding: 20px 22px;
+    color: #fff;
+    text-align: center;
+}
+
+.feedback-card-header h5 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.feedback-card-header p {
+    margin: 0;
+    font-size: 0.82rem;
+    opacity: 0.85;
+}
+
+.feedback-card-body { padding: 24px 22px; }
+
+/* ── Star rating ────────────────────────────────────────────────── */
+.star-rating-label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 12px;
+    display: block;
+    text-align: center;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.star-rating input[type="radio"] { display: none; }
+
+.star-rating label {
+    font-size: 2.2rem;
+    color: #dee2e6;
+    cursor: pointer;
+    transition: color 0.15s, transform 0.15s;
+    line-height: 1;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #dee2e6;
+}
+
+.star-rating label:hover,
+.star-rating input:checked + label,
+.star-rating label.selected {
+    color: #ffc107;
+}
+
+/* Hover effect — highlight stars up to hovered */
+.star-rating:hover label { color: #dee2e6; }
+.star-rating label:hover,
+.star-rating label:hover ~ label + label + label,
+.star-rating label:hover ~ label + label,
+.star-rating label:hover ~ label { color: #dee2e6; }
+
+/* ── Star rating using flex-direction reverse trick ─────────────── */
+.stars-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.star-btn {
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    color: #dee2e6;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.15s, transform 0.1s;
+}
+
+.star-btn:hover,
+.star-btn:hover ~ .star-btn {
+    color: #ffc107;
+    transform: scale(1.1);
+}
+
+.stars-wrap.rated .star-btn.filled { color: #ffc107; }
+
+/* ── Rating label ───────────────────────────────────────────────── */
+.rating-text {
+    text-align: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #6c757d;
+    min-height: 22px;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+}
+
+/* ── Comment box ────────────────────────────────────────────────── */
+.comment-group { margin-bottom: 20px; }
+
+.comment-group label {
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.comment-group textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 0.88rem;
+    padding: 10px 13px;
+    resize: vertical;
+    min-height: 90px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.comment-group textarea:focus {
+    border-color: #1a6b2f;
+    box-shadow: 0 0 0 3px rgba(26,107,47,0.10);
+    outline: none;
+}
+
+/* ── Alert ──────────────────────────────────────────────────────── */
+.alert-box {
+    display: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+}
+
+.alert-box.alert-danger {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    display: block;
+}
+
+.alert-box.alert-success {
+    background: #d1e7dd;
+    border: 1px solid #a3cfbb;
+    color: #0a3622;
+    display: block;
+}
+
+/* ── Submit button ──────────────────────────────────────────────── */
+.btn-submit-feedback {
+    background: #1a6b2f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-submit-feedback:hover    { background: #155724; }
+.btn-submit-feedback:disabled { opacity: 0.65; cursor: not-allowed; }
+
+/* ── Success state ──────────────────────────────────────────────── */
+.success-state {
+    text-align: center;
+    padding: 32px 20px;
+}
+
+.success-icon-wrap {
+    width: 72px;
+    height: 72px;
+    background: #e8f5e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 2rem;
+    color: #1a6b2f;
+}
+
+.success-state h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 6px;
+}
+
+.success-state p {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Stars display in success */
+.stars-display {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.btn-back-complaints {
+    background: #1a6b2f;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 24px;
+    font-size: 0.90rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-back-complaints:hover { background: #155724; color: #fff; }
+
+/* ── Bottom nav ─────────────────────────────────────────────────── */
+.bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    z-index: 1000;
+    padding: 6px 0 8px;
+}
+
+.bottom-nav-inner { display: flex; justify-content: space-around; }
+
+.bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    color: #adb5bd;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 4px 12px;
+}
+
+.bottom-nav-item i      { font-size: 1.2rem; }
+.bottom-nav-item.active { color: #1a6b2f; }
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .content-area  { padding: 14px 14px 80px; }
+    .bottom-nav    { display: block; }
+    .btn-logout    { display: none; }
+    .consumer-name { max-width: 90px; }
+    .star-btn      { font-size: 2rem; }
+}
