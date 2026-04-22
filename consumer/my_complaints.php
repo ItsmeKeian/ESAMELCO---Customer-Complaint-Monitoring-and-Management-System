@@ -1,4 +1,4 @@
-<?php require_once '../../php/auth_check_consumer.php'; ?>
+<?php require_once '../php/auth_check_consumer.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
