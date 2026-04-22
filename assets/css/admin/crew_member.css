@@ -124,7 +124,7 @@
     display: flex !important;
 }
 
-.modal-backdrop {
+.crew-modal-backdrop {
     position: absolute;
     inset: 0;
 }

@@ -172,7 +172,7 @@
      ADD CREW MODAL
 ═══════════════════════════════════════════════════════════════ -->
 <div id="addModal" class="crew-modal">
-    <div class="modal-backdrop"></div>
+    <div class="crew-modal-backdrop"></div>
     <div class="modal-card">
         <div class="modal-card-header">
             <h6><i class="bi bi-person-plus me-2"></i>Add Crew Member</h6>

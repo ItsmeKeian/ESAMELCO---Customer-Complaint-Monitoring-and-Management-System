@@ -27,11 +27,13 @@ $(document).ready(function () {
         setTimeout(() => toast.fadeOut(400, () => toast.remove()), 3500);
     }
 
-    function openModal(id)  { $(id).fadeIn(200); }
+    function openModal(id) {
+        $(id).css('display', 'flex').hide().fadeIn(200);
+    }
     function closeModal(id) { $(id).fadeOut(200); }
 
     // Close modals on backdrop click
-    $('.modal-backdrop').on('click', function () {
+    $('.crew-modal-backdrop').on('click', function () {
         closeModal('#addModal');
         closeModal('#editModal');
     });
@@ -133,7 +135,7 @@ $(document).ready(function () {
         const btn = $('#btn-save-add').prop('disabled', true).text('Saving...');
 
         $.ajax({
-            url: '../php/admin_crew_member.php?action=add',
+            url: '../php/admin/crew_member.php?action=add',
             type: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
