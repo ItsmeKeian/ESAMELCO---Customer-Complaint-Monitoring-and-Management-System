@@ -71,6 +71,13 @@
                 <i class="bi bi-person-lines-fill"></i>Consumers
             </a>
         </li>
+
+        <li class="nav-item">
+            <a href="feedback.php" class="nav-link">
+                <i class="bi bi-star"></i>Feedback
+            </a>
+        </li>
+        
         <li class="nav-item">
             <a href="reports.php" class="nav-link">
                 <i class="bi bi-bar-chart-line"></i>Reports
